@@ -1,43 +1,32 @@
 import requests
 import os
-from langchain.document_loaders import TextLoader
 from langchain.text_splitter import CharacterTextSplitter
 from langchain.embeddings import OpenAIEmbeddings, HuggingFaceInstructEmbeddings
 from langchain.chat_models import ChatOpenAI
 from langchain.memory import ConversationBufferMemory
 from langchain.chains import ConversationalRetrievalChain
 from langchain.vectorstores import FAISS
-# from langchain.llms import CTransformers
 from langchain_groq import ChatGroq
 from dotenv import load_dotenv
 
 load_dotenv()
 
-llm = ChatGroq(
+groq_llm = ChatGroq(
     model="mixtral-8x7b-32768",
     temperature=0,
     max_tokens=None,
     timeout=None,
     max_retries=2,
-    # other params...
 )
 
-# chat = CTransformers(model=r"C:\Users\harsh\Desktop\GitChat\Backend\models\mistral-7b-instruct-v0.2.Q8_0.gguf",
-#                     model_type='llama',
-#                     config={'max_new_tokens':8192,
-#                             'context_length':16384,
-#                             "top_k": 1,
-#                             "top_p": 0.0,
-#                             'temperature':0})
+openai_llm = ChatOpenAI(model_name="gpt-3.5-turbo")
 
 class Embedder:
     def __init__(self, git_link) -> None:
         self.git_link = git_link
         self.repo_name = '/'.join(self.git_link.split('/')[-2:])
         self.repo_name = self.repo_name.replace('.git', '')
-        # self.model = ChatOpenAI(model_name="gpt-3.5-turbo")
-        self.onprem = llm
-        # self.openai = OpenAIEmbeddings()
+        self.openai = OpenAIEmbeddings()
         self.instruct = HuggingFaceInstructEmbeddings(model_name='hkunlp/instructor-xl')
         self.allowed_extensions = ['.py', '.ipynb', '.md']
 
@@ -87,9 +76,9 @@ class Embedder:
     def retrieve_results(self, query):
         memory = ConversationBufferMemory(memory_key='chat_history',return_messages=True)
         qa = ConversationalRetrievalChain.from_llm(
-            llm = self.onprem, chain_type="stuff", retriever=self.retriever,
+            llm = self.model, chain_type="stuff", retriever=self.retriever,
             memory=memory,
-            condense_question_llm=self.onprem
+            condense_question_llm=self.model
         )
         result = qa({"question": query})
         return result['answer']

@@ -3,7 +3,7 @@ import { useEffect, useRef, useState } from 'react';
 import React from 'react';
 import DOMPurify from 'dompurify';
 import sendBtn from '../assets/send.svg';
-import ai from '../assets/ai.svg';
+import ai from '../assets/bot.png';
 import uicon from '../assets/uicon.png';
 import Skeleton from 'react-loading-skeleton';
 import 'react-loading-skeleton/dist/skeleton.css';

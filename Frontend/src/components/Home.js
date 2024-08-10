@@ -33,7 +33,7 @@ const Home = () => {
   return (
     <>
     {!loading && <div className='repository-gpt'>
-      <h1><img src={github} alt="" className='gitImg'></img>Chat with your repository</h1>
+      <h1><img src={github} alt="" className='gitImg'></img>GitInsight</h1>
       <form onSubmit={handleSubmit}>
         <div className="form-group">
           <label htmlFor="repo-url">Enter the GitHub repository URL</label>
