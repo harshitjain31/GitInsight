@@ -1,0 +1,450 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Outfit', sans-serif;
+}
+
+html{
+  font-size: 62.5%;
+}
+
+body{
+  background: #dfdee3;
+  color: #09090b;
+  font-family: 'Outfit';
+}
+
+.App{
+  min-height: 100vh;
+  display: flex;
+}
+
+.main{
+  flex: 9;
+}
+
+.logo{
+  margin-right: 1rem;
+  width: 19rem;
+}
+
+.brand{
+  font-size: 2.5rem;
+}
+
+.query{
+  display: flex;
+  align-items: center;
+  background: transparent;
+  color: #09090b;
+  padding: 1.5rem;
+  width: 25rem;
+  margin: 1rem auto;
+  border-radius: 0.5rem;
+  border: 1px solid rgba(98,98,98,1);
+}
+
+.query>img{
+  margin-right: 2rem;
+  object-fit: cover;
+  height: 1.75rem;
+}
+
+.main{
+  min-height: calc(100vh - 14rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: auto auto;
+}
+
+.chats{
+  overflow: hidden;
+  overflow-y:scroll;
+  scroll-behavior: smooth;
+  width: 90rem;
+  height: calc(100vh - 16rem);
+  background: #ffffff;
+  border-radius: 24px;
+  color: #09090b;
+}
+
+.chats::-webkit-scrollbar {
+  width: 0; /* Remove scrollbar width */
+  background: transparent; /* Optional: Set scrollbar background color to match container background */
+}
+
+.chat{
+  margin: 1rem;
+  padding: 2rem 3rem;
+  font-size: 1.3rem;
+  display: flex;
+  align-items: flex-start;
+  text-align: justify;
+  background: #ffffff;
+  border-radius: 16px;
+  color:#09090b;
+    z-index: 0;
+}
+   
+.chat b {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+  
+.chat p, .chat span {
+  font-size: 1.3rem;
+  margin: 6px 2px;
+  white-space: pre-line; /* Ensures that the newlines are rendered properly */
+}
+
+.chatImg{
+  object-fit: cover;
+  border-radius: 50%;
+  width: 3.5rem;
+  margin-right: 2rem;
+}
+
+.gitImg{
+  object-fit: cover;
+  border-radius: 50%;
+  width: 4rem;
+  margin-right: 2rem;
+}
+
+.bot{
+  background: #f4f4f5;
+  border-radius: 16px;
+  color: #09090b;
+}
+
+.chatFooter{
+  width: 90rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 2rem;
+}
+
+.inp{
+  padding: 0.5rem;
+  background: #ffffff;
+  display: flex;
+  align-items: center;
+  border-radius: 1rem;
+  width: 90rem;
+}
+
+.selectInput{
+  width: 640px; 
+  height: 36px; 
+  padding-left: 12px; 
+  padding-right: 12px; 
+  font-size: 14px; 
+  line-height: 22px; 
+  font-weight: 400; 
+  background: #303035; /* neutral-200 */
+  border-radius: 4px; /* border-m */
+  border-width: 0px; 
+  outline: none;
+  color: rgba(222,222,222,1);
+  margin-bottom: 1.5rem;
+}
+
+.inp>input{
+  width: calc(100% - 3rem);
+  outline: none;
+  padding: 1.25rem;
+}
+
+.inp>input, .send{
+  background: transparent;
+  border: none;
+}
+
+.txt{
+  line-height: 2.4rem;
+  color: #09090b;
+}
+
+.tableContainer {
+  margin-top: 1rem;
+  overflow-x: auto;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1rem;
+  border-radius: 1rem;
+  overflow: hidden;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.3);
+  padding: 10rem;
+}
+
+th, td {
+  padding: 1rem;
+  text-align: left;
+  border-bottom: 1px solid rgba(222, 222, 222, 0.3);
+}
+
+thead {
+  background-color: #100f13;
+}
+
+th {
+  color: white;
+  font-weight: 700;
+}
+
+tbody tr {
+  background-color: #18181a;;
+}
+
+.downloadButtons {
+  width: 2.5rem;
+}
+
+.downloadButtons:hover{
+  cursor: pointer;
+}
+
+.text {
+  font-size: 18px; 
+  line-height: 28px; 
+  font-weight: 500; 
+  color: #f0f0f0;
+  padding-left: 2rem;
+  padding-top: 1.5rem;
+  padding-bottom: 1rem;
+}
+
+/* Textbox 24 */
+.textbox {
+  top: 68px; 
+  left: 24px; 
+  padding-left: 2rem;
+  padding-top: 0.5rem;
+  padding-bottom: 1rem;
+}
+
+/* .textbox input {
+  width: 300px; 
+  height: 36px; 
+  padding-left: 12px; 
+  padding-right: 12px;
+  font-size: 14px; 
+  line-height: 22px; 
+  font-weight: 400; 
+  background: #F3F4F6FF; 
+  border-radius: 4px;
+  border-width: 0px; 
+  outline: none;
+} */
+
+/* .textbox input {
+  padding: 0.5rem;
+  background: #100f13;
+  margin-bottom: 1.5rem;
+  font-weight: 400;
+  display: flex;
+  align-items: center;
+  border-radius: 1rem;
+  width: 35rem;
+  outline: none;
+  color: rgba(222,222,222,1);
+} */
+
+.textbox input {
+  width: 640px; 
+  height: 36px; 
+  padding-left: 12px; 
+  padding-right: 12px; 
+  font-size: 14px; 
+  line-height: 22px; 
+  font-weight: 400; 
+  background: #303035; /* neutral-200 */
+  border-radius: 4px; /* border-m */
+  border-width: 0px; 
+  outline: none;
+  color: rgba(222,222,222,1);
+  margin-bottom: 1.5rem;
+}
+
+.label {
+  font-size: 14px; 
+  line-height: 30px;
+  font-weight: 400;
+}
+
+.submit{
+  background: #6761dc;
+  margin-top: 1.5rem;
+  border-radius: 1rem;
+  width: 10rem;
+  height: 3rem;
+  border-width: 0px; 
+  outline: none;
+}
+
+.submit:hover{
+  cursor: pointer;
+}
+
+.subSections {
+  display: flex;
+  justify-content: space-between;
+}
+
+.subSection {
+  flex: 1;
+  padding: 2rem;
+  background-color: #303035;
+  border-radius: 1rem;
+  margin: 1rem;
+}
+
+.subSection h2 {
+  color: #fff;
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.subSection p {
+  color: #ccc;
+}
+
+.loading1 {
+  margin: 1rem;
+  padding: 2rem 3rem;
+  font-size: 1.3rem;
+  display: flex;
+  /* Use flexbox to align items in a row */
+  align-items: center;
+  /* Center items vertically */
+  justify-content: flex-start;
+  /* Center items horizontally */
+  text-align: justify;
+  background: #f4f4f5;
+  border-radius: 16px;
+  color: rgb(240, 233, 233);
+}
+
+.avatar-skeleton {
+  width: 90%;
+  opacity: 50%;
+}
+
+.repository-gpt {
+  width: 100%;
+  max-width: 100rem;
+  height: calc(100vh - 16rem);
+  background: #ffffff;
+  border-radius: 24px;
+  color: #09090b;
+  margin: 0 auto;
+  min-height: calc(100vh - 14rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 7rem;
+}
+
+.repository-gpt.blur {
+  filter: blur(5px); /* Apply blur when loading */
+}
+
+.repository-gpt h1 {
+  font-size: 5rem;
+  line-height: 1;
+  font-weight: 700;
+  margin-top: 5rem;
+  margin-bottom: 10rem;
+}
+
+.repository-gpt p {
+  font-size: 1.2em;
+  margin-bottom: 1.5em;
+}
+
+.repository-gpt .form-group {
+  margin-bottom: 1em;
+  text-align: center;
+}
+
+.repository-gpt label {
+  display: block;
+  font-size: 1.7rem;
+  margin-bottom: 1em;
+}
+
+.repository-gpt input[type="url"],
+.repository-gpt input[type="text"] {
+  width: 50rem;
+  padding: 0.5em;
+  font-size: 1.5rem;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  box-sizing: border-box;
+  margin-bottom: 3rem;
+}
+
+.repository-gpt button {
+  background-color: #87898E;
+  color: white;
+  padding: 0.75em 1.5em;
+  font-size: 1.3rem;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  width: 50rem;
+}
+
+.repository-gpt button:hover {
+  background-color: #9fa1a7;
+}
+
+
+.loading {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed; /* Make the loading container fixed */
+  top: 50%; /* Center vertically */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Offset to exact center */
+  background: transparent;
+}
+
+.loading-text {
+  position: fixed; /* Fix the position of the text */
+  top: 40%; /* Slightly above center */
+  left: 50%; /* Center horizontally */
+  transform: translate(-50%, -50%); /* Offset to exact center */
+  text-align: center; /* Center align text */
+  font-size: 24px; /* Increase font size */
+  background: transparent;
+}
+
+.footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  border-top: 1px solid #ddd;
+  font-size: 10px;
+  color: #333;
+  margin-top: 16rem;
+}
+
+.footer p {
+  margin: 0;
+}
+
+.footer .github-logo {
+  width: 20px;
+  height: 20px;
+}
+

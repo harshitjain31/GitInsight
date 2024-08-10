@@ -1,0 +1,11 @@
+langchain
+deeplake
+streamlit
+python-dotenv
+openai
+sentence_transformers==2.2.2
+langchain-community
+tiktoken
+faiss-cpu
+ctransformer
+langchain-groq
