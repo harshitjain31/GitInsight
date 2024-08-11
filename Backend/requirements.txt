@@ -1,11 +1,15 @@
 langchain
-deeplake
-streamlit
 python-dotenv
 openai
 sentence_transformers==2.2.2
 langchain-community
 tiktoken
 faiss-cpu
-ctransformer
+ctransformers
 langchain-groq
+flask
+flask_cors
+InstructorEmbedding
+torch==2.2.2 --index-url https://download.pytorch.org/whl/cpu
+torchvision==0.17.2 --index-url https://download.pytorch.org/whl/cpu
+torchaudio==2.2.2 --index-url https://download.pytorch.org/whl/cpu
