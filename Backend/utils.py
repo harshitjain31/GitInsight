@@ -27,6 +27,7 @@ class Embedder:
         self.repo_name = '/'.join(self.git_link.split('/')[-2:])
         self.repo_name = self.repo_name.replace('.git', '')
         self.openai = OpenAIEmbeddings()
+        self.model = groq_llm
         self.instruct = HuggingFaceInstructEmbeddings(model_name='hkunlp/instructor-xl')
         self.allowed_extensions = ['.py', '.ipynb', '.md']
 
