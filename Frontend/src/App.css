@@ -448,3 +448,51 @@ tbody tr {
   height: 20px;
 }
 
+@media (max-width: 768px) {
+    .App {
+        flex-direction: column;
+    }
+
+    .chats, .chatFooter, .inp {
+        width: 100%;
+    }
+
+    .repository-gpt input[type="url"],
+    .repository-gpt input[type="text"],
+    .repository-gpt button {
+        width: 90%;
+    }
+
+    .repository-gpt h1 {
+        font-size: 3rem;
+        margin-top: 2rem;
+        margin-bottom: 4rem;
+    }
+
+    .repository-gpt p {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .query {
+        width: 90%;
+        padding: 1rem;
+    }
+
+    .repository-gpt input[type="url"],
+    .repository-gpt input[type="text"],
+    .repository-gpt button {
+        width: 100%;
+    }
+
+    .repository-gpt h1 {
+        font-size: 2.5rem;
+    }
+
+    .repository-gpt p {
+        font-size: 0.9rem;
+    }
+}
+
+
