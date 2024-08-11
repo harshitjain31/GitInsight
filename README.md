@@ -14,7 +14,11 @@
 - **GitHub API**: Access and interact with GitHub repositories.
 - **LangChain**: Document loading, text splitting, and embedding.
 - **FAISS**: Vector-based storage and retrieval.
-- **ChatGroq**: Advanced language modeling.
+- **ChatGroq**: Large Language Model.
 - **Flask**: Backend API development.
 - **Python**: Core programming language.
 - **dotenv**: Environment variable management.
+
+![Home Page](Frontend/src/assets/Home.png)
+
+![Chat Interface](Frontend/src/assets/Chat.png)
