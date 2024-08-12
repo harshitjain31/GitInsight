@@ -22,3 +22,5 @@
 ![Home Page](Frontend/src/assets/Home.png)
 
 ![Chat Interface](Frontend/src/assets/Chat.png)
+
+![Chat Interface](Frontend/src/assets/chat.png)
