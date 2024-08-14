@@ -21,6 +21,6 @@
 
 ![Home Page](Frontend/src/assets/Home.png)
 
-![Chat Interface](Frontend/src/assets/Chat.png)
+![Chat Interface](Frontend/src/assets/org_home.png)
 
-![Chat Interface](Frontend/src/assets/chat.png)
+![Chat Interface](Frontend/src/assets/org_chat.png)
